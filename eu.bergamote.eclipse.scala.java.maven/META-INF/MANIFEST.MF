@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mixed Scala / Java Eclipse plug-in example
+Bundle-SymbolicName: eu.bergamote.eclipse.scala.java.maven;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: eu.bergamote.eclipse.scala.java.maven.Activator
+Bundle-Vendor: Bergamote.eu
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: eu.bergamote.eclipse.scala.java.maven
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/,
+ .

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="eu.bergamote.eclipse.scala.java.maven.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="eu.bergamote.eclipse.scala.java.maven.commands.category"
+            name="Sample Command"
+            id="eu.bergamote.eclipse.scala.java.maven.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="eu.bergamote.eclipse.scala.java.maven.handlers.HelloWorldHandler"
+            commandId="eu.bergamote.eclipse.scala.java.maven.commands.sampleCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="eu.bergamote.eclipse.scala.java.maven.commands.sampleCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="eu.bergamote.eclipse.scala.java.maven.menus.sampleMenu"
+               label="Sample Menu"
+               mnemonic="M">
+            <command
+                  commandId="eu.bergamote.eclipse.scala.java.maven.commands.sampleCommand"
+                  id="eu.bergamote.eclipse.scala.java.maven.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="eu.bergamote.eclipse.scala.java.maven.toolbars.sampleToolbar">
+            <command
+                  id="eu.bergamote.eclipse.scala.java.maven.toolbars.sampleCommand"
+                  commandId="eu.bergamote.eclipse.scala.java.maven.commands.sampleCommand"
+                  icon="icons/sample.png"
+                  tooltip="Say hello world">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>
